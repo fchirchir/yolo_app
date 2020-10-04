@@ -1,9 +1,6 @@
 # Set base image
 FROM node:current-buster-slim
 
-# Change user
-USER node
-
 # Copy client folder
 COPY client/ /home/node/client
 
