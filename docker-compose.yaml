@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+    db:
+        image: mongo:4.2.10
+        container_name: mongo-db
+        restart: always
+        ports:
+            - 27017:27017
+    backend:
+        build:
+            context: backend_files
+        container_name: backend_cnt
+        restart: always
+        ports:
+            - 5000:5000
+        depends_on:
+            - db
+    frontend:
+        build:
+            context: client_files
+        container_name: client_cnt
+        restart: always
+        ports:
+            - 3000:3000
+        depends_on:
+            - backend
