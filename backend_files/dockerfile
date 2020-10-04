@@ -14,4 +14,4 @@ RUN npm install --dd
 EXPOSE 5000
 
 # Command
-CMD /bin/bash -c "cd /home/node/backend/ && npm start"
+CMD /bin/bash -c "npm start"
