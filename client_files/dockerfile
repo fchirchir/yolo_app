@@ -1,0 +1,14 @@
+# Set base image
+FROM node:current-buster-slim
+
+# Change user
+USER node
+
+# Copy client folder
+COPY client/ /home/node/client
+
+# Install node packages
+RUN npm install --dd
+
+# Command
+CMD /bin/bash -c "cd /home/node/client/ && npm start"
