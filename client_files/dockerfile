@@ -7,8 +7,14 @@ USER node
 # Copy client folder
 COPY client/ /home/node/client
 
+#Change working dir
+WORKDIR /home/node/client/
+
 # Install node packages
 RUN npm install --dd
+
+# Expose port to host
+EXPOSE 3000
 
 # Command
 CMD /bin/bash -c "cd /home/node/client/ && npm start"
