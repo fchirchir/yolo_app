@@ -1,11 +1,11 @@
 # Set base image
 FROM node:current-buster-slim
 
-# Change user
-USER node
-
 # Copy backend folder
 COPY backend/ /home/node/backend
+
+#Change working dir
+WORKDIR /home/node/backend/
 
 # Install node packages
 RUN npm install --dd
