@@ -13,10 +13,10 @@ Make sure that you have [Docker](https://docs.docker.com/desktop/) installed for
 ## Run the following command to confirm services are up and running
  `docker ps -a`
 
-## Navigate to your browser at port `3000` and ensure the Web App loads
- `[Click Here](http://localhost:3000) to navigate`
+## Test Web App
+Navigate to your [browser](http://localhost:3000) at port `3000` and ensure the Web App loads okay.
 
-## Finally
+## Finally!!
 Add a new product(note that the price field only takes a numeric input) using the Web App and refresh the page once done.
  
 You should see the new product you just added.
