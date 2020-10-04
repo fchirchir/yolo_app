@@ -10,5 +10,8 @@ WORKDIR /home/node/backend/
 # Install node packages
 RUN npm install --dd
 
+# Expose port to host
+EXPOSE 5000
+
 # Command
 CMD /bin/bash -c "cd /home/node/backend/ && npm start"
