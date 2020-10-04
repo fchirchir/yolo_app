@@ -22,6 +22,7 @@ services:
         depends_on:
             - db
     frontend:
+        stdin_open: true
         build:
             context: client_files
         container_name: client_cnt
